@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+Wpisz działanie!
+<br>
+<form action="/calculate">
+    <input type="text" name="numbers">
+    <button>Oblicz</button>
+</form>
+<hr>
+Wynik działania!
+<p th:text="${result}">
+</p>
+<hr>
+Historia wyników
+<br>
+<ul>
+    <li th:each="item : ${resultList}" th:text="${item}">
+    </li>
+</ul>
+
+</body>
+</html>
